@@ -4,11 +4,12 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRegistration;
 
 public class XmlWebApplicationInitializer implements WebApplicationInitializer {
+
     @Override
     public void onStartup(ServletContext container) throws ServletException {
         XmlWebApplicationContext context = new XmlWebApplicationContext();
