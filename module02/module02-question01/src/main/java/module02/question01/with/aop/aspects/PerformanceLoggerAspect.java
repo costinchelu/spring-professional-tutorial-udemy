@@ -21,6 +21,7 @@ public class PerformanceLoggerAspect {
         // ADVICE
         long startTime = System.currentTimeMillis();
         try {
+            System.out.println("Logging around " + proceedingJoinPoint.getSignature().getName());
             return proceedingJoinPoint.proceed();
         } finally {
             long finishTime = System.currentTimeMillis();
