@@ -1,3 +1,6 @@
+## Module 01
+&nbsp;
+&nbsp;
 ### 01.01. What is dependency injection? Advantages.
 &nbsp;
 ### 01.02. What is a pattern/anti-pattern? Is DI a pattern? 
@@ -35,7 +38,7 @@
 &nbsp;
 ### 01.15. What does ComponentScanning do?
 &nbsp
-### 01.16. What is the behavior of the @Autowired with regards to field, constructor or method injection?
+### 01.16. What is the behavior of the @Autowired in regard to field, constructor or method injection?
 &nbsp;
 ### 01.17. What do you have to do, if you would like to inject something into a private field and how does this impact testing?
 &nbsp;
@@ -74,6 +77,10 @@
 ### 01.33. What can you reference using SpEL?
 &nbsp;
 ### 01.34. What is the difference between $ and # in @Value expressions?
+&nbsp;
+&nbsp;
+## Module 02
+&nbsp;
 &nbsp;
 ### 02.01. What is the concept of Aspect Oriented Programming and which problems does it solve?
 ### 02.01. What is a cross-cutting concern?
