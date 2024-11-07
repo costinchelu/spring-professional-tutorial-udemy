@@ -43,7 +43,7 @@ public class SanitizeAspect {
             return arg;
     }
 
-    private boolean containsAnnotationOfType(Annotation[] parameterAnnotations, Class sanitizeClass) {
+    private boolean containsAnnotationOfType(Annotation[] parameterAnnotations, Class<Sanitize> sanitizeClass) {
         return Arrays.stream(parameterAnnotations)
                 .map(Annotation::annotationType)
                 .anyMatch(sanitizeClass::equals);

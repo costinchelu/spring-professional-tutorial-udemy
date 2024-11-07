@@ -12,18 +12,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class ComplexReportAction {
 
-    @Autowired
     private ComplexReportProvider complexReportProvider;
 
-    @Autowired
     private ComplexReportFormatter complexReportFormatter;
 
-    @Autowired
     private ComplexReportRepository complexReportRepository;
 
-    // performance logging - cross cutting concern
-    @Autowired
-    private PerformanceLogger performanceLogger;
+    private PerformanceLogger performanceLogger;        // performance logging - cross cutting concern
+
+    public ComplexReportAction(ComplexReportProvider provider,
+                               ComplexReportFormatter formatter,
+                               ComplexReportRepository repository,
+                               PerformanceLogger logger) {
+        this.complexReportProvider = provider;
+        this.complexReportFormatter = formatter;
+        this.complexReportRepository = repository;
+        this.performanceLogger = logger;
+    }
 
     public void perform() throws InterruptedException {
         PerformanceLogger.PerformanceLoggerInfo performanceLoggerInfo;
