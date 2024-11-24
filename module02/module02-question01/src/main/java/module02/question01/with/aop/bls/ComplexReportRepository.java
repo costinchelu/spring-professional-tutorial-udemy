@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class ComplexReportRepository {
 
-    // JOINTPOINT
+    // --> JOINTPOINT
     @PerformanceLogger
     public void save(Report report) throws InterruptedException {
         System.out.println("Saving the report...");

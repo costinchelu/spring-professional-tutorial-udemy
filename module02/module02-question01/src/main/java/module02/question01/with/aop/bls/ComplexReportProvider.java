@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class ComplexReportProvider {
 
-    // JOINTPOINT
+    // --> JOINTPOINT
     @PerformanceLogger
     @Cacheable
     public Report getReport() throws InterruptedException {

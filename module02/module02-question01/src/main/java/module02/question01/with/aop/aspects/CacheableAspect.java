@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-// ASPECT
+// --> ASPECT
 @Aspect
 @Component
 public class CacheableAspect {
@@ -20,10 +20,10 @@ public class CacheableAspect {
 
     private final Map<CacheKey, Object> cache = new HashMap<>();
 
-    // POINTCUT EXPRESSION
+    // --> POINTCUT EXPRESSION
     @Around("@annotation(module02.question01.with.aop.annotations.Cacheable)")
     public Object checkCache(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        // ADVICE
+        // --> ADVICE
         CacheKey cacheKey = new CacheKey(proceedingJoinPoint);
 
         if (cache.containsKey(cacheKey)) {

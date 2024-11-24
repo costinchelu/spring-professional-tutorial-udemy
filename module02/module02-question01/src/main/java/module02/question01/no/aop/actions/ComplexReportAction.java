@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ComplexReportAction {
 
-    private ComplexReportProvider complexReportProvider;
+    private final ComplexReportProvider complexReportProvider;
 
-    private ComplexReportFormatter complexReportFormatter;
+    private final ComplexReportFormatter complexReportFormatter;
 
-    private ComplexReportRepository complexReportRepository;
+    private final ComplexReportRepository complexReportRepository;
 
-    private PerformanceLogger performanceLogger;        // performance logging - cross cutting concern
+    private final PerformanceLogger performanceLogger;        // performance logging - cross cutting concern
 
     public ComplexReportAction(ComplexReportProvider provider,
                                ComplexReportFormatter formatter,

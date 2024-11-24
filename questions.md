@@ -1,33 +1,124 @@
-## Module 01
-&nbsp;
-&nbsp;
-### 01.01. What is dependency injection? Advantages.
-&nbsp;
-### 01.02. What is a pattern/anti-pattern? Is DI a pattern? 
-&nbsp;
-### 01.03. What is an interface? Advantages and why are they recommended for Spring Beans.
-&nbsp;
-### 01.04. What is meant by "application-context"
-&nbsp;
-### 01.05. What is the concept of a container and what is its lifecycle?
-&nbsp;
-### 01.06. How are you going to create a new instance of an ApplicationContext?
-&nbsp;
-### 01.07. Lifecycle of a Spring Bean in an ApplicationContext.
+| Module.Question | Subject                                                      |
+| --------------- | ------------------------------------------------------------ |
+| 01.01.          | What is dependency injection? Advantages.                    |
+| 01.02.          | What is a pattern/anti-pattern? Is DI a pattern?             |
+| 01.03           | What is an interface? Advantages and why are they recommended for Spring Beans. |
+| 01.04           | What is meant by "application-context"                       |
+| 01.05           | What is the concept of a container and what is its lifecycle? |
+| 01.06           | How are you going to create a new instance of an *ApplicationContext*? |
+| 01.07           | Lifecycle of a Spring Bean in an *ApplicationContext*.       |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+|                 |                                                              |
+
+
+
 &nbsp;
 ### 01.08. How to create an ApplicationContext in an integration test?
 &nbsp;
 ### 01.09. What is the preferred way to close an application context? Does Spring Boot do this for you?
 &nbsp;
-### 01.10. Describe dependency injection using: Java configuration, annotations(@Component, @Autowired), component scanning, stereotypes, meta-annotations. 
+### 01.10. Describe dependency injection using: Java configuration, annotations(*@Component, @Autowired*), component scanning, stereotypes, meta-annotations. 
 ### 01.10. What are scopes for beans and what is the default scope?
 &nbsp;
 ### 01.11. Are beans lazily or eagerly instantiated by default?
 &nbsp;
-### 01.12. What is a property source and how can we use @PropertySource?
+### 01.12. What is a property source and how can we use *@PropertySource*?
 &nbsp;
-### 01.13. What is a BeanFactoryPostProcessor, what is it used for and when it is invoked? 
+### 01.13. What is a *BeanFactoryPostProcessor*, what is it used for and when it is invoked? 
+
 ### 01.13. Why would you define a static @Beam method? 
+
+
+
 ### 01.13. What is a PropertySourcesPlaceholderConfigurer used for?
 &nbsp;
 ### 01.14. What is a BeanPostProcessor, how is it different to a BeanFactoryPostProcessor and what do they do?

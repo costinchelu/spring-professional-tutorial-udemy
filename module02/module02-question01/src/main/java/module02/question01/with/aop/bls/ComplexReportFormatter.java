@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class ComplexReportFormatter {
 
-    // JOINTPOINT
+    // --> JOINTPOINT
     @PerformanceLogger
     public FormattedReport formatReport(Report report) throws InterruptedException {
         System.out.println("Formatting the report...");

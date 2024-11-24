@@ -5,20 +5,24 @@ import module02.question01.with.aop.bls.ComplexReportProvider;
 import module02.question01.with.aop.bls.ComplexReportRepository;
 import module02.question01.with.aop.ds.FormattedReport;
 import module02.question01.with.aop.ds.Report;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ComplexReportAction {
 
-    @Autowired
-    private ComplexReportProvider complexReportProvider;
+    private final ComplexReportProvider complexReportProvider;
 
-    @Autowired
-    private ComplexReportFormatter complexReportFormatter;
+    private final ComplexReportFormatter complexReportFormatter;
 
-    @Autowired
-    private ComplexReportRepository complexReportRepository;
+    private final ComplexReportRepository complexReportRepository;
+
+    public ComplexReportAction(ComplexReportProvider complexReportProvider,
+                               ComplexReportFormatter complexReportFormatter,
+                               ComplexReportRepository complexReportRepository) {
+        this.complexReportProvider = complexReportProvider;
+        this.complexReportFormatter = complexReportFormatter;
+        this.complexReportRepository = complexReportRepository;
+    }
 
     public void perform() throws InterruptedException {
         Report report = complexReportProvider.getReport();
