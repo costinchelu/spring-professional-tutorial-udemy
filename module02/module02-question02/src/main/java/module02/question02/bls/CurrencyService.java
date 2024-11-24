@@ -1,13 +1,14 @@
-package com.spring.professional.exam.tutorial.module02.question02.bls;
+package module02.question02.bls;
 
-import com.spring.professional.exam.tutorial.module02.question02.annotations.InTransaction;
-import com.spring.professional.exam.tutorial.module02.question02.annotations.Secured;
-import com.spring.professional.exam.tutorial.module02.question02.ds.CurrencyId;
+import module02.question02.annotations.InTransaction;
+import module02.question02.annotations.Secured;
+import module02.question02.ds.CurrencyId;
 import org.springframework.stereotype.Component;
 
 @Component("currency_service")
 @Secured
 public class CurrencyService {
+
     @InTransaction
     public float getExchangeRate(String from, String to) {
         return 0f;

@@ -1,4 +1,4 @@
-package com.spring.professional.exam.tutorial.module02.question02.aspects;
+package module02.question02.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -7,19 +7,20 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class CurrencyServiceAspect {
-    @Pointcut("@annotation(com.spring.professional.exam.tutorial.module02.question02.annotations.InTransaction)")
+
+    @Pointcut("@annotation(module02.question02.annotations.InTransaction)")
     public void transactionAnnotationPointcut() {
     }
 
-    @Pointcut("within(com.spring.professional.exam.tutorial.module02.question02.bls.*)")
+    @Pointcut("within(module02.question02.bls.*)")
     public void blsPackagePointcut() {
     }
 
-    @Pointcut("@within(com.spring.professional.exam.tutorial.module02.question02.annotations.Secured)")
+    @Pointcut("@within(module02.question02.annotations.Secured)")
     public void securedClassPointcut() {
     }
 
-    @Pointcut("execution(* com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService.getExchangeRate(..))")
+    @Pointcut("execution(* module02.question02.bls.CurrencyService.getExchangeRate(..))")
     public void getExchangeRateMethodPointcut() {
     }
 
@@ -31,19 +32,19 @@ public class CurrencyServiceAspect {
     public void stringsAndIntegerArgumentsMethodPointcut() {
     }
 
-    @Pointcut("@args(com.spring.professional.exam.tutorial.module02.question02.annotations.Validated)")
+    @Pointcut("@args(module02.question02.annotations.Validated)")
     public void validatedArgumentPointcut() {
     }
 
-    @Pointcut("target(com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService)")
+    @Pointcut("target(module02.question02.bls.CurrencyService)")
     public void currencyServiceTargetPointcut() {
     }
 
-    @Pointcut("@target(com.spring.professional.exam.tutorial.module02.question02.annotations.Secured)")
+    @Pointcut("@target(module02.question02.annotations.Secured)")
     public void currencyServiceSecuredTargetPointcut() {
     }
 
-    @Pointcut("this(com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService)")
+    @Pointcut("this(module02.question02.bls.CurrencyService)")
     public void currencyServiceThisPointcut() {
     }
 
@@ -111,12 +112,12 @@ public class CurrencyServiceAspect {
         System.out.println("After - blsPackageAndInTransactionPointcut");
     }
 
-    @AfterThrowing(value = "execution(* com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService.getCurrencyCountryName(..))", throwing = "exception")
+    @AfterThrowing(value = "execution(* module02.question02.bls.CurrencyService.getCurrencyCountryName(..))", throwing = "exception")
     public void afterThrowingException(Exception exception) {
         System.out.println("Exception was thrown from getCurrencyCountryName: " + exception.getClass().getSimpleName());
     }
 
-    @AfterReturning(value = "execution(* com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService.getCurrencyCountryName(..))", returning = "value")
+    @AfterReturning(value = "execution(* module02.question02.bls.CurrencyService.getCurrencyCountryName(..))", returning = "value")
     public void afterThrowingException(String value) {
         System.out.println("Value returned from getCurrencyCountryName: " + value);
     }

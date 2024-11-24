@@ -7,25 +7,20 @@ import static org.mockito.Mockito.*;
 
 class PerformanceLoggerAspectTest {
 
+    PerformanceLoggerAspect aspect = new PerformanceLoggerAspect();
+
+    ProceedingJoinPoint joinPoint = mock(ProceedingJoinPoint.class);
+    Signature signature = mock(Signature.class);
+
     @Test
     void testAspect() throws Throwable {
-
-        PerformanceLoggerAspect aspect = new PerformanceLoggerAspect();
-
-
-        ProceedingJoinPoint joinPoint = mock(ProceedingJoinPoint.class);
-        Signature signature = mock(Signature.class);
-
 
         when(joinPoint.getSignature()).thenReturn(signature);
         when(signature.getName()).thenReturn("save");
 
-
         aspect.logPerformance(joinPoint);
 
-
         verify(joinPoint, times(2)).getSignature();
-        verify(signature, times(1)).getName();
+        verify(signature, times(2)).getName();
     }
-
 }

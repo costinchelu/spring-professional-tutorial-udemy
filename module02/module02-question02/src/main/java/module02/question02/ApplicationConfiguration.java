@@ -1,4 +1,4 @@
-package com.spring.professional.exam.tutorial.module02.question02;
+package module02.question02;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,9 +1,9 @@
-package com.spring.professional.exam.tutorial.module02.question02;
+package module02.question02;
 
-import com.spring.professional.exam.tutorial.module02.question02.bls.AlternativeCurrenciesRepository;
-import com.spring.professional.exam.tutorial.module02.question02.bls.CurrenciesRepository;
-import com.spring.professional.exam.tutorial.module02.question02.bls.CurrencyService;
-import com.spring.professional.exam.tutorial.module02.question02.ds.CurrencyId;
+import module02.question02.bls.AlternativeCurrenciesRepository;
+import module02.question02.bls.CurrenciesRepository;
+import module02.question02.bls.CurrencyService;
+import module02.question02.ds.CurrencyId;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Runner {
@@ -18,6 +18,7 @@ public class Runner {
         currencyService.getExchangeRate("EUR", "USD");
         currencyService.getExchangeRate("EUR", "USD", 100);
         currencyService.getCurrencyLongName(CurrencyId.EUR);
+
         try {
             currencyService.getCurrencyCountryName(CurrencyId.EUR);
         } catch (Exception e) {

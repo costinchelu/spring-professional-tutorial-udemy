@@ -18,7 +18,7 @@ public class CacheableAspect {
 
     private final Logger logger = Logger.getLogger("cache.logger");
 
-    private final Map<CacheKey, Object> cache = new HashMap<>();
+    private final Map<CacheKey, Object> cacheMap = new HashMap<>();
 
     // --> POINTCUT EXPRESSION
     @Around("@annotation(module02.question01.with.aop.annotations.Cacheable)")
@@ -26,12 +26,12 @@ public class CacheableAspect {
         // --> ADVICE
         CacheKey cacheKey = new CacheKey(proceedingJoinPoint);
 
-        if (cache.containsKey(cacheKey)) {
-            logger.info("Fetching value from cache for " + proceedingJoinPoint.getSignature().toShortString());
-            return cache.get(cacheKey);
+        if (cacheMap.containsKey(cacheKey)) {
+            logger.info("Report fetched from the cache " + proceedingJoinPoint.getSignature().toShortString());
+            return cacheMap.get(cacheKey);
         } else {
             Object result = proceedingJoinPoint.proceed();
-            cache.put(cacheKey, result);
+            cacheMap.put(cacheKey, result);
             return result;
         }
     }
@@ -53,8 +53,7 @@ public class CacheableAspect {
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
-            if (!(o instanceof CacheKey)) return false;
-            CacheKey cacheKey = (CacheKey) o;
+            if (!(o instanceof CacheKey cacheKey)) return false;
             return target == cacheKey.target &&
                     Objects.equals(signature, cacheKey.signature) &&
                     Arrays.equals(args, cacheKey.args);

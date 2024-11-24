@@ -21,13 +21,13 @@ public class PerformanceLoggerAspect {
         // ADVICE
         long startTime = System.currentTimeMillis();
         try {
-            System.out.println("Logging around " + proceedingJoinPoint.getSignature().getName());
+            logger.info("Logging around " + proceedingJoinPoint.getSignature().getName());
             return proceedingJoinPoint.proceed();
         } finally {
             long finishTime = System.currentTimeMillis();
             Duration duration = Duration.ofMillis(finishTime - startTime);
 
-            logger.info(String.format("Duration of %s execution was %s", proceedingJoinPoint.getSignature(), duration));
+            logger.info(String.format("Duration of %s execution was %s", proceedingJoinPoint.getSignature().getName(), duration));
         }
     }
 }
