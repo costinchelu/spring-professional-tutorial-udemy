@@ -4,38 +4,47 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+// aspect needs to be a bean
 @Component
 @Aspect
 public class CurrencyServiceAspect {
 
+    // @annotation = execution of the given types annotated with a specific annotation
     @Pointcut("@annotation(module02.question02.annotations.InTransaction)")
     public void transactionAnnotationPointcut() {
     }
 
+    // within = execution of the given types inside a package
     @Pointcut("within(module02.question02.bls.*)")
     public void blsPackagePointcut() {
     }
 
+    // @within = execution of the given types annotated with a specific annotation
     @Pointcut("@within(module02.question02.annotations.Secured)")
     public void securedClassPointcut() {
     }
 
+    // execution = method execution (method with name getExchangeRate and any arguments)
     @Pointcut("execution(* module02.question02.bls.CurrencyService.getExchangeRate(..))")
     public void getExchangeRateMethodPointcut() {
     }
 
+    // bean = execution for the Spring name
     @Pointcut("bean(currency_service)")
     public void namedBeanPointcut() {
     }
 
+    // execution of the methods with the matched arguments
     @Pointcut("args(String, String, int)")
     public void stringsAndIntegerArgumentsMethodPointcut() {
     }
 
+    // execution of the methods with the matched arguments annotated with the specific annotation
     @Pointcut("@args(module02.question02.annotations.Validated)")
     public void validatedArgumentPointcut() {
     }
 
+    // targets specific class
     @Pointcut("target(module02.question02.bls.CurrencyService)")
     public void currencyServiceTargetPointcut() {
     }
@@ -54,6 +63,7 @@ public class CurrencyServiceAspect {
 
     @Before("transactionAnnotationPointcut()")
     public void beforeTransactionAnnotationAdvice() {
+        // here we have the advice for the first pointcut of this class (method transactionAnnotationPointcut)
         System.out.println("Before - transactionAnnotationPointcut");
     }
 
