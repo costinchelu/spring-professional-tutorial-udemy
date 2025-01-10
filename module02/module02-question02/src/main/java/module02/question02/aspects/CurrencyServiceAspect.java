@@ -4,14 +4,20 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-// aspect needs to be a bean
+// aspects needs to be defined as beans
 @Component
 @Aspect
 public class CurrencyServiceAspect {
 
+    // a pointcut is a PREDICATE used to match a joint point - inform Spring in which part of the program we want the modified behaviour
+
+    // advice = additional behaviour that is executed in all parts of the program that are matching pointcut
+
+    // Spring uses the AspectJ pointcut expression language by default
     // @annotation = execution of the given types annotated with a specific annotation
     @Pointcut("@annotation(module02.question02.annotations.InTransaction)")
     public void transactionAnnotationPointcut() {
+        // advice is on line 72
     }
 
     // within = execution of the given types inside a package
@@ -60,6 +66,7 @@ public class CurrencyServiceAspect {
     @Pointcut("blsPackagePointcut() && transactionAnnotationPointcut()")
     public void blsPackageAndInTransactionPointcut() {
     }
+
 
     @Before("transactionAnnotationPointcut()")
     public void beforeTransactionAnnotationAdvice() {

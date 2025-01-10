@@ -16,6 +16,8 @@ public class Runner {
         CurrenciesRepository currenciesRepository = context.getBean(CurrenciesRepository.class);
         AlternativeCurrenciesRepository alternativeCurrenciesRepository = context.getBean(AlternativeCurrenciesRepository.class);
 
+        // joint points (each execution of an advised method)
+        // only the execution of the methods from outside their classes is supported by Spring AOP
         currencyService.getExchangeRate("EUR", "USD");
         currencyService.getExchangeRate("EUR", "USD", 100);
         currencyService.getCurrencyLongName(CurrencyId.EUR);

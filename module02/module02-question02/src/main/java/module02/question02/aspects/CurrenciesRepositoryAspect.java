@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class CurrenciesRepositoryAspect {
 
+    // inlined pointcut expressions
     @Before("this(module02.question02.bls.CurrenciesRepositoryImpl)")
     public void beforeThisCurrenciesRepository() {
         System.out.println("Before - this(CurrenciesRepositoryImpl)");
