@@ -48,21 +48,22 @@
 
 
 
-| Module.Question | Spring AOP                                                                           |
-|-----------------|--------------------------------------------------------------------------------------|
-| 02.01           | What is the concept of Aspect Oriented Programming and which problems does it solve? |
-|                 | What is a cross-cutting concern?                                                     |
-|                 | What problems arise if you don't resolve a cross cutting concern via AOP?            |
-|                 | Name three typical cross-cutting concerns.                                           |
-| 02.02           | What is a pointcut, a join point, an advice, an aspect, weaving?                     |
-| 02.03           | How does Spring solve (implement) a cross cutting concern?                           |
-| 02.04           | Which are the limitations of the two proxy types?                                    |
-|                 | What visibility must Spring bean methods have to be proxied using Spring AOP?        |
-| 02.05           | How many advice types does Spring support and what are they used for?                |
-|                 | Which two advices can you use if you would like to try and catch exceptions?         |
-| 02.06           | What do you have to do to enable the detection of the *@Aspect* annotation?          |
-|                 | What does *@EnableAspectJAutoProxy* do?                                              |
-| 02.07           |                                                                                      |
-|                 |                                                                                      |
-|                 |                                                                                      |
+| Module.Question | Spring AOP                                                                             |
+|-----------------|----------------------------------------------------------------------------------------|
+| 02.01           | What is the concept of Aspect Oriented Programming and which problems does it solve?   |
+|                 | What is a cross-cutting concern?                                                       |
+|                 | What problems arise if you don't resolve a cross cutting concern via AOP?              |
+|                 | Name three typical cross-cutting concerns.                                             |
+| 02.02           | What is a pointcut, a join point, an advice, an aspect, weaving?                       |
+| 02.03           | How does Spring solve (implement) a cross cutting concern?                             |
+| 02.04           | Which are the limitations of the two proxy types?                                      |
+|                 | What visibility must Spring bean methods have to be proxied using Spring AOP?          |
+| 02.05           | How many advice types does Spring support and what are they used for?                  |
+|                 | Which two advices can you use if you would like to try and catch exceptions?           |
+| 02.06           | What do you have to do to enable the detection of the *@Aspect* annotation?            |
+|                 | What does *@EnableAspectJAutoProxy* do?                                                |
+| 02.07           | If shown pointcut expressions, would you understand them?                              |
+|                 | What would be the correct pointcut expression to match both getter and setter methods? |
+| 08.08           |                                                                                        |
+|                 |                                                                                        |
 
