@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,7 +19,6 @@
 	<modules>
 	    <module>module01</module>
 	    <module>module02</module>
-        <module>module03</module>
     </modules>
 
 </project>
