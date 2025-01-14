@@ -9,27 +9,27 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class HelloBeanAspect {
 
-    @Before("execution(public !int com..HelloBean.say*(String, *))")
+    @Before("execution(public !int module02..HelloBean.say*(String, *))")
     public void executionExample() {
         System.out.println("Before - execution example");
     }
 
-    @After("execution(void com..HelloChildBean.validateName(..) throws java.io.IOException)")
+    @After("execution(void module02..HelloChildBean.validateName(..) throws java.io.IOException)")
     public void executionWithExceptionExample() {
         System.out.println("After - execution with exception matcher example");
     }
 
-    @Before("within(com..HelloChildBean)")
+    @Before("within(module02..HelloChildBean)")
     public void withinExample1() {
         System.out.println("Before - withinExample1");
     }
 
-    @Before("within(com..*)")
+    @Before("within(module02..*)")
     public void withinExample2() {
         System.out.println("Before - withinExample2");
     }
 
-    @Before("within(com..Hello*Bean)")
+    @Before("within(module02..Hello*Bean)")
     public void withinExample3() {
         System.out.println("Before - withinExample3");
     }

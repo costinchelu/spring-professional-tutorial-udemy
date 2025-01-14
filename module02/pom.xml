@@ -20,7 +20,7 @@
 		<spring.framework.version>6.1.2</spring.framework.version>
     </properties>
 	
-	    <modules>
+	<modules>
         <module>module02-question01</module>
         <module>module02-question02</module>
         <module>module02-question03</module>

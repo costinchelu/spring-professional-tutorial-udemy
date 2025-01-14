@@ -46,8 +46,6 @@
 
 &nbsp;
 
-
-
 | Module.Question | Spring AOP                                                                             |
 |-----------------|----------------------------------------------------------------------------------------|
 | 02.01           | What is the concept of Aspect Oriented Programming and which problems does it solve?   |
@@ -64,6 +62,8 @@
 |                 | What does *@EnableAspectJAutoProxy* do?                                                |
 | 02.07           | If shown pointcut expressions, would you understand them?                              |
 |                 | What would be the correct pointcut expression to match both getter and setter methods? |
-| 08.08           |                                                                                        |
-|                 |                                                                                        |
+| 08.08           | What is the JointPoint argument used for?                                              |
+| 08.09           | What is the ProceedingJoinPoint and when is it used?                                   |
+
+&nbsp;
 

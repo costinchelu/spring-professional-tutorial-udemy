@@ -19,6 +19,7 @@
 	<modules>
 	    <module>module01</module>
 	    <module>module02</module>
-	</modules>
+        <module>module03</module>
+    </modules>
 
 </project>
