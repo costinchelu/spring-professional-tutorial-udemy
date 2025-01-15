@@ -64,15 +64,3 @@
 |                 | What would be the correct pointcut expression to match both getter and setter methods? |
 | 08.08           | What is the JointPoint argument used for?                                              |
 | 08.09           | What is the ProceedingJoinPoint and when is it used?                                   |
-
-&nbsp;
-
-| Module.Question | Spring AOP                                                       |
-|-----------------|------------------------------------------------------------------|
-| 03.01           | What is the difference between checked and unchecked exceptions? |
-|                 | Why does Spring prefer unchecked exceptions?                     |
-|                 | What is the data access exception hierarchy?                     |
-| 03.02           | How do you configure a DataSource in Spring?                     |
-|                 | Which bean is very useful for development/test databases?        |
-| 03.03           |                                                                  |
-|                 |                                                                  |
